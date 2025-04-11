@@ -8,7 +8,7 @@
   <style>
     /* Ustawienia dla całej strony */
     html, body {
-      height: 100%;
+      height: 100%; /* Ustawienie na pełną wysokość strony */
       margin: 0;
       padding: 0;
       font-family: sans-serif;
@@ -28,7 +28,8 @@
       width: 100%;
       padding: 20px;
       text-align: center; /* Wyśrodkowanie tekstu */
-      flex: 1; /* Sprawia, że kontener wypełnia przestrzeń */
+      flex: 1; /* Kontener wypełnia przestrzeń */
+      z-index: 1; /* Przesunięcie na wierzch, aby tło było widoczne */
     }
 
     /* Nagłówek */
@@ -37,7 +38,7 @@
       top: 0;
       left: 0;
       width: 100%;
-      background-color: #fff;
+      background-color: green;
       z-index: 1000;
       padding: 10px 0;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -99,6 +100,11 @@
     /* Margines na górze, żeby nagłówek nie zasłaniał zawartości */
     body {
       margin-top: 80px;
+    }
+
+    footer {
+      position: relative;
+      z-index: 10; /* Upewnij się, że stopka jest widoczna */
     }
   </style>
 </head>
