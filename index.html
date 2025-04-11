@@ -8,28 +8,26 @@
   <style>
     /* Ustawienia dla całej strony */
     html, body {
-      height: 100%;
+      height: 100%; /* Ustawienie na pełną wysokość strony */
       margin: 0;
       padding: 0;
       font-family: sans-serif;
       background-image: url('https://m.media-amazon.com/images/I/912J76GVoBS._AC_UF1000,1000_QL80_.jpg');
-      background-size: cover;
+      background-size: cover; /* Obraz w tle na całą stronę */
       background-position: center;
       background-repeat: no-repeat;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
+      position: absolute; /* Ustawienie tła na całą stronę */
+      width: 100%;
     }
 
     /* Kontener główny */
     .container {
+      position: relative;
       max-width: 900px;
       width: 100%;
       padding: 20px;
       text-align: center; /* Wyśrodkowanie tekstu */
-      flex: 1; /* Kontener wypełnia przestrzeń */
-      z-index: 1; /* Przesunięcie na wierzch, aby tło było widoczne */
+      z-index: 10; /* Aby kontener był nad tłem */
     }
 
     /* Nagłówek */
@@ -57,7 +55,7 @@
 
     /* Sekcje */
     section, footer {
-      background-color: rgba(255, 255, 255, 0.5); /* Ustawienie przezroczystości */
+      background-color: rgba(255, 255, 255, 0.7); /* Ustawienie przezroczystości */
       padding: 20px;
       border-radius: 10px;
       margin-bottom: 20px;
@@ -82,7 +80,7 @@
 
     /* Wiersz */
     .poem {
-      background-color: rgba(255, 255, 255, 0.5); /* Ustawienie przezroczystości */
+      background-color: rgba(255, 255, 255, 0.7); /* Ustawienie przezroczystości */
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
