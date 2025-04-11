@@ -11,19 +11,35 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 100vh;
     margin: 0;
     padding: 0;
     font-family: sans-serif;
   }
 
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
   section, footer {
-    background-color: rgba(255, 255, 255, 0.85); /* białe, lekko przezroczyste tło */
+    background-color: rgba(255, 255, 255, 0.85);
     padding: 20px;
     border-radius: 10px;
-    margin: 20px auto;
-    max-width: 800px;
+    margin-bottom: 20px;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+
+  .gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .gallery img {
+    max-width: 100%;
+    height: auto;
   }
 </style>
 </head>
