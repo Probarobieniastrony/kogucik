@@ -6,71 +6,100 @@
   <title>Cisza na sali</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-body {
-  background-image: url('https://m.media-amazon.com/images/I/912J76GVoBS._AC_UF1000,1000_QL80_.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  height: 100vh; /* Dostosowanie do pełnej wysokości ekranu */
-}
+    /* Ustawienia dla całej strony */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background-image: url('https://m.media-amazon.com/images/I/912J76GVoBS._AC_UF1000,1000_QL80_.jpg');
+      background-size: cover; /* Obraz w tle na całą stronę */
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
 
-.container {
-  max-width: 900px;
-  width: 100%;
-  padding: 20px;
-  text-align: center; /* Wyśrodkowanie tekstu */
-}
+    /* Kontener główny */
+    .container {
+      max-width: 900px;
+      width: 100%;
+      padding: 20px;
+      text-align: center; /* Wyśrodkowanie tekstu */
+      flex: 1; /* Sprawia, że kontener wypełnia przestrzeń */
+    }
 
-section, footer {
-  background-color: rgba(255, 255, 255, 0.03); /* Zwiększona przezroczystość */
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  transition: background-color 0.3s ease;
-  text-align: center; /* Wyśrodkowanie treści w sekcjach */
-}
+    /* Nagłówek */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: green;
+      z-index: 1000;
+      padding: 10px 0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
 
-.gallery {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  align-items: center; /* Wyrównanie obrazów na środku */
-}
+    nav {
+      text-align: center;
+    }
 
-.gallery img {
-  max-width: 25%;
-  height: auto;
-}
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+    }
 
-.poem {
-  background-color: rgba(255, 255, 255, 0.3); /* Zwiększona przezroczystość */
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
-  margin: 0 auto;
-  font-size: 1.2em;
-  line-height: 1.6;
-}
+    /* Sekcje */
+    section, footer {
+      background-color: rgba(255, 255, 255, 0.5); /* Ustawienie przezroczystości */
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease;
+      text-align: center;
+    }
 
-.poem h2 {
-  font-size: 1.5em;
-  color: #555;
-}
+    /* Galeria */
+    .gallery {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
 
-body {
-  margin-top: 80px; /* Zapewnia, że treść nie zasłoni nagłówka */
-}
+    .gallery img {
+      max-width: 25%;
+      height: auto;
+    }
 
+    /* Wiersz */
+    .poem {
+      background-color: rgba(255, 255, 255, 0.5); /* Ustawienie przezroczystości */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 1.2em;
+      line-height: 1.6;
+    }
+
+    .poem h2 {
+      font-size: 1.5em;
+      color: #555;
+    }
+
+    /* Margines na górze, żeby nagłówek nie zasłaniał zawartości */
+    body {
+      margin-top: 80px;
+    }
   </style>
 </head>
 <body>
@@ -85,7 +114,7 @@ body {
 
   <div class="container">
     <section id="about" class="section">
-      <h1>Cisza jest pasją</h1>
+      <h2>Cisza jest pasją</h2>
       <div class="poem">
         <p>
           O ciszy, co w sercu gra,<br>
@@ -115,7 +144,7 @@ body {
     </section>
 
     <section id="gallery" class="section">
-      <h1>CISZA !!!</h1>
+      <h2>CISZA !!!</h2>
       <div class="gallery">
         <img src="https://cdn.pixabay.com/animation/2025/02/02/07/30/07-30-47-543_512.gif" alt="Cisza 1" />
         <img src="https://media.tenor.com/tBNR_2VHaQAAAAAM/shh-quiet.gif" alt="Cisza 2" />
@@ -124,7 +153,7 @@ body {
     </section>
 
     <section id="contact" class="section">
-      <h1>Kontakt</h1>
+      <h2>Kontakt</h2>
       <p>Nie ma kontaktu bo masz być cicho</p>
     </section>
 
