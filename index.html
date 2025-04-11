@@ -6,85 +6,71 @@
   <title>Cisza na sali</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    body {
-      background-image: url('https://m.media-amazon.com/images/I/912J76GVoBS._AC_UF1000,1000_QL80_.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      margin: 0;
-      padding: 0;
-      font-family: sans-serif;
-    }
+body {
+  background-image: url('https://m.media-amazon.com/images/I/912J76GVoBS._AC_UF1000,1000_QL80_.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh; /* Dostosowanie do pełnej wysokości ekranu */
+}
 
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px;
-    }
+.container {
+  max-width: 900px;
+  width: 100%;
+  padding: 20px;
+  text-align: center; /* Wyśrodkowanie tekstu */
+}
 
-    section, footer {
-      background-color: rgba(255, 255, 255, 0.3); /* Zwiększona przezroczystość */
-      padding: 20px;
-      border-radius: 10px;
-      margin-bottom: 20px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-      transition: background-color 0.3s ease;
-    }
+section, footer {
+  background-color: rgba(255, 255, 255, 0.3); /* Zwiększona przezroczystość */
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+  text-align: center; /* Wyśrodkowanie treści w sekcjach */
+}
 
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background-color: green;
-      z-index: 1000;
-      padding: 10px 0;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
+.gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center; /* Wyrównanie obrazów na środku */
+}
 
-    nav {
-      text-align: center;
-    }
+.gallery img {
+  max-width: 25%;
+  height: auto;
+}
 
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-    }
+.poem {
+  background-color: rgba(255, 255, 255, 0.3); /* Zwiększona przezroczystość */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.2em;
+  line-height: 1.6;
+}
 
-    .gallery {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
+.poem h2 {
+  font-size: 1.5em;
+  color: #555;
+}
 
-    .gallery img {
-      max-width: 25%;
-      height: auto;
-    }
+body {
+  margin-top: 80px; /* Zapewnia, że treść nie zasłoni nagłówka */
+}
 
-    .poem {
-      background-color: rgba(255, 255, 255, 0.3); /* Zwiększona przezroczystość */
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      max-width: 600px;
-      margin: 0 auto;
-      font-size: 1.2em;
-      line-height: 1.6;
-    }
-
-    .poem h2 {
-      font-size: 1.5em;
-      color: #555;
-    }
-
-    /* Dodanie marginesu na górze, aby zawartość nie zasłaniała nagłówka */
-    body {
-      margin-top: 80px;
-    }
   </style>
 </head>
 <body>
