@@ -74,9 +74,9 @@ footer {
   background: #eee;
   font-size: 0.9rem;
 }
-.container {
-  max-width: 900px;
-  margin: 0 auto;
+.section {
+  width: 100%;
+  max-width: 700px;
+  margin: 1rem auto; /* auto = centrowanie poziome */
   padding: 2rem;
-  padding-top: 80px; /* jeśli header jest fixed */
 }
