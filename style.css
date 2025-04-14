@@ -80,3 +80,13 @@ footer {
   margin: 1rem auto; /* auto = centrowanie poziome */
   padding: 2rem;
 }
+.contact-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 600px; /* to ogranicza szerokość */
+  margin: 0 auto;    /* to centruje */
+  box-sizing: border-box;
+}
