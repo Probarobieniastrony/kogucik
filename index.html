@@ -35,19 +35,24 @@
 
     /* Nagłówek */
     header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background-color: green;
-      z-index: 1000;
-      padding: 10px 0;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: green;
+  z-index: 1000;
+  padding: 10px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: flex-end; /* tylko prawa strona */
+  align-items: center;
+  border-radius: 0 0 10px 10px;
+  max-width: fit-content; /* tylko tyle, ile trzeba */
+}
 
-    nav {
-      text-align: center;
-    }
+nav {
+  display: flex;
+  gap: 20px;
+}
 
     nav a {
       margin: 0 15px;
@@ -111,7 +116,6 @@
 </head>
 <body>
   <header>
-    <h1>Cisza w pracy</h1>
     <nav>
       <a href="#about">Wierszyk</a>
       <a href="#gallery">Czy jest cisza?</a>
