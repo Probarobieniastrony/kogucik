@@ -1,148 +1,174 @@
-<!DOCTYPE html>
 <html lang="pl">
-<audio autoplay loop hidden>
-  <source src="muza.mp3" type="audio/mpeg">
-</audio>
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cisza w pracy</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    /* Ustawienia dla całej strony */
-    html, body {
-      height: 100%; /* Ustawienie na pełną wysokość strony */
-      margin: 0;
-      padding: 0;
-      font-family: sans-serif;
-      background-image: url('https://m.media-amazon.com/images/I/912J76GVoBS._AC_UF1000,1000_QL80_.jpg');
-      background-size: 100% 100%; /* Obraz w tle na całą stronę */
-      background-position: center;
-      background-repeat: repeat;
-      position: relative; /* Zmiana z `position: center` na `relative` */
-      width: 100%;
-    }
+  <audio autoplay loop hidden>
+    <source src="muza.mp3" type="audio/mpeg" />
+  </audio>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cisza w pracy</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Global styles */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        position: relative;
+        width: 100%;
+      }
 
-    /* Kontener główny */
-    .container {
-      position: relative;
-      max-width: 900px;
-      width: 100%;
-      padding: 20px;
-      text-align: center; /* Wyśrodkowanie tekstu */
-      z-index: 10; /* Aby kontener był nad tłem */
-      display: flex;
-      flex-direction: column;
-      align-items: center; /* Wyśrodkowanie zawartości w kontenerze */
-    }
+      /* Tło strony */
+      body {
+        background-image: url('https://m.media-amazon.com/images/I/912J76GVoBS._AC_UF1000,1000_QL80_.jpg');
+        background-size: cover; /* Pokrywa całą stronę */
+        background-position: center; /* Tło jest wyśrodkowane */
+        background-repeat: no-repeat; /* Tło się nie powtarza */
+        background-attachment: fixed; /* Tło się nie przesuwa przy scrollowaniu */
+        color: #333;
+      }
 
-    /* Nagłówek */
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      background-color: black;
-      z-index: 1000;
-      padding: 10px 20px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      display: flex;
-      justify-content: flex-end; /* tylko prawa strona */
-      align-items: center;
-      border-radius: 0 0 10px 10px;
-      max-width: fit-content; /* tylko tyle, ile trzeba */
-    }
+  /* Header */
+  header {
+    background: #007a3d; /* Adjusted background */
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: fit-content;
+    border-radius: 0 0 10px 10px;
+  }
 
-    nav {
-      display: flex;
-      gap: 20px;
-    }
+  nav {
+    display: flex;
+    gap: 20px;
+  }
 
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #fff;
-      font-weight: bold;
-    }
+  nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+  }
 
-    /* Sekcje */
-    section, footer {
-      background-color: rgba(255, 255, 255, 0.07); /* Ustawienie przezroczystości */
-      padding: 20px;
-      border-radius: 10px;
-      margin-bottom: 20px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-      transition: background-color 0.3s ease;
-      text-align: center;
-    }
+  /* Main container */
+  .container {
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-    /* Galeria */
-    .gallery {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-    }
+  /* Section styles */
+  section, footer {
+    background-color: rgba(255, 255, 255, 0.07);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    text-align: center;
+  }
 
-    .gallery img {
-      max-width: 25%;
-      height: auto;
-    }
+  /* Poem styling */
+  .poem {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.2em;
+    line-height: 1.6;
+  }
 
-    /* Wiersz */
-    .poem {
-      background-color: rgba(255, 255, 255, 0.7); /* Ustawienie przezroczystości */
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      max-width: 600px;
-      margin: 0 auto;
-      font-size: 1.2em;
-      line-height: 1.6;
-    }
+  .poem h2 {
+    font-size: 1.5em;
+    color: #555;
+  }
 
-    .poem h2 {
-      font-size: 1.5em;
-      color: #555;
-    }
-    
-    footer {
-      position: relative;
-      z-index: 10; /* Upewnij się, że stopka jest widoczna */
-    }
+  /* Gallery */
+  .gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+  }
 
-    /* Formularz kontaktowy */
-    .contact-container {
-      background-color: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      max-width: 600px;
-      text-align: center;
-      width: 100%;
-    }
+  .gallery img {
+    max-width: 25%;
+    height: auto;
+  }
 
-    input, textarea {
-      width: 100%;
-      padding: 10px 15px;
-      margin: 10px;
-      border-radius: 4px;
-      border: 1px solid #ccc;
-    }
+  /* Contact form */
+  .contact-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+  }
 
-    button {
-      padding: 10px 15px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    box-sizing: border-box;
+  }
 
-    button:hover {
-      background-color: #0056b3;
-    }
-  </style>
+  input, textarea {
+    width: 100%;
+    padding: 10px 15px;
+    margin: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  button {
+    background-color: #007a3d;
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background: #eee;
+    font-size: 0.9rem;
+  }
+</style>
+
 </head>
 <body>
   <header>
