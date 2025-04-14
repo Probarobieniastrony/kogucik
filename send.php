@@ -1,6 +1,6 @@
 <?php
 // Ustaw swój adres email tutaj:
-$to = "kamil.skrzypiec@grupaarmet.pl";
+$to = "";
 
 // Pobierz dane z formularza
 $contactChoice = $_POST['contactChoice'] ?? '';
