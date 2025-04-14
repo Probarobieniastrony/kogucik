@@ -1,261 +1,102 @@
 <!DOCTYPE html>
 <html lang="pl">
-  <audio autoplay loop hidden>
-    <source src="muza.mp3" type="audio/mpeg" />
-  </audio>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cisza w pracy</title>
-    <link rel="stylesheet" href="style.css" />
-    <style>
-      /* Global styles */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        font-family: sans-serif;
-        position: relative;
-        width: 100%;
-      }
-
-      /* Tło strony */
-      body {
-        background-image: url('https://m.media-amazon.com/images/I/912J76GVoBS._AC_UF1000,1000_QL80_.jpg');
-        background-size: cover; /* Pokrywa całą stronę */
-        background-position: center; /* Tło jest wyśrodkowane */
-        background-repeat: no-repeat; /* Tło się nie powtarza */
-        background-attachment: fixed; /* Tło się nie przesuwa przy scrollowaniu */
-        color: #333;
-      }
-
-  /* Header */
-  header {
-    background: #007a3d; /* Adjusted background */
-    color: white;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: fit-content;
-    border-radius: 0 0 10px 10px;
-  }
-
-  nav {
-    display: flex;
-    gap: 20px;
-  }
-
-  nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-  }
-
-  /* Main container */
-  .container {
-    position: relative;
-    max-width: 900px;
-    width: 100%;
-    padding: 20px;
-    text-align: center;
-    z-index: 10;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  /* Section styles */
-  section, footer {
-    background-color: rgba(255, 255, 255, 0.07);
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
-    text-align: center;
-  }
-
-  /* Poem styling */
-  .poem {
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin: 0 auto;
-    font-size: 1.2em;
-    line-height: 1.6;
-  }
-
-  .poem h2 {
-    font-size: 1.5em;
-    color: #555;
-  }
-
-  /* Gallery */
-  .gallery {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    align-items: center;
-  }
-
-  .gallery img {
-    max-width: 25%;
-    height: auto;
-  }
-
-  /* Contact form */
-  .contact-container {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: border-box;
-  }
-
-  form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    box-sizing: border-box;
-  }
-
-  input, textarea {
-    width: 100%;
-    padding: 10px 15px;
-    margin: 10px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-  }
-
-  button {
-    background-color: #007a3d;
-    color: white;
-    border: none;
-    padding: 0.8rem;
-    cursor: pointer;
-    border-radius: 4px;
-  }
-
-  button:hover {
-    background-color: #0056b3;
-  }
-
-  /* Footer */
-  footer {
-    text-align: center;
-    padding: 1rem;
-    background: #eee;
-    font-size: 0.9rem;
-  }
-</style>
-
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cisza na sali</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <header>
+    <h1>Cisza</h1>
     <nav>
-      <a href="#about">Wierszyk</a>
-      <a href="#gallery">Czy jest cisza?</a>
-      <a href="#contact">Kontakt</a>
+      <a href="#onas">O nas</a>
+      <a href="#realizacje">Realizacje</a>
+      <a href="#kontakt">Kontakt</a>
     </nav>
   </header>
 
-  <div class="container">
-    <section id="about" class="section">
-      <h2>Cisza jest pasją</h2>
-      <div class="poem">
+  <section id="about" class="section">
+    <h2>Cisza jest pasją</h2>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiersz o Ciszy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            text-align: center;
+            margin: 50px;
+        }
+        .poem {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+        .poem h2 {
+            font-size: 1.5em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="poem">
+        <h2>Wiersz o Ciszy</h2>
         <p>
-          O ciszy, co w sercu gra,<br>
-          co w mroku nocą rozkwita,<br>
-          bez słów, bez dźwięków, bez szumu,<br>
-          w niej spoczywa każda myśl, znużona.
+            O ciszy, co w sercu gra,<br>
+            co w mroku nocą rozkwita,<br>
+            bez słów, bez dźwięków, bez szumu,<br>
+            w niej spoczywa każda myśl, znużona.
         </p>
         <p>
-          Cisza jak mgła nad rzeką,<br>
-          w niej ukryte są odpowiedzi,<br>
-          zamiast krzyku, zamiast echa<br>
-          w ciszy serce spokojnie wiedzie.
+            Cisza jak mgła nad rzeką,<br>
+            w niej ukryte są odpowiedzi,<br>
+            zamiast krzyku, zamiast echa<br>
+            w ciszy serce spokojnie wiedzie.
         </p>
         <p>
-          Nie potrzeba słów, by zrozumieć,<br>
-          co mówi milczenie głębokie,<br>
-          w tej przestrzeni bez wyrazu<br>
-          kryje się prawda prosta, niepokorna.
+            Nie potrzeba słów, by zrozumieć,<br>
+            co mówi milczenie głębokie,<br>
+            w tej przestrzeni bez wyrazu<br>
+            kryje się prawda prosta, niepokorna.
         </p>
         <p>
-          Cisza, co w sercu kołysze,<br>
-          nie pyta, nie woła, nie czeka,<br>
-          po prostu jest, jak cień za dniem,<br>
-          tworzy spokój, co niczym nie zburzy.
+            Cisza, co w sercu kołysze,<br>
+            nie pyta, nie woła, nie czeka,<br>
+            po prostu jest, jak cień za dniem,<br>
+            tworzy spokój, co niczym nie zburzy.
         </p>
-      </div>
-    </section>
+    </div>
+</body>
+</html>
+</p>
+  </section>
 
-    <section id="gallery" class="section">
-      <h2>CISZA !!!</h2>
-      <div class="gallery">
-        <img src="https://cdn.pixabay.com/animation/2025/02/02/07/30/07-30-47-543_512.gif" alt="Cisza 1" />
-        <img src="https://media.tenor.com/tBNR_2VHaQAAAAAM/shh-quiet.gif" alt="Cisza 2" />
-        <img src="https://media.tenor.com/xS9-ZZ1vlfYAAAAM/steve-harvey-nothing.gif" alt="Cisza 3" />
-      </div>
-    </section>
+  <section id="gallery" class="section">
+    <h2>Nasze realizacje</h2>
+    <div class="gallery">
+      <img src="https://cdn.pixabay.com/animation/2025/02/02/07/30/07-30-47-543_512.gif" />
+      <img src="https://media.tenor.com/tBNR_2VHaQAAAAAM/shh-quiet.gif" />
+      <img src="https://media.tenor.com/xS9-ZZ1vlfYAAAAM/steve-harvey-nothing.gif" />
+    </div>
+  </section>
 
-    <section id="contact" class="section">
-      <h2>Kontakt</h2>
-      <div class="contact-container">
-        <h2>Formularz kontaktowy</h2>
-        <form action="send.php" method="post" id="contactForm">
-          <label for="contactChoice">Wybierz sposób kontaktu (numer telefonu lub adres e-mail):</label>
-          <div>
-            <input type="radio" id="phone" name="contactChoice" value="phone" required>
-            <label for="phone">Numer telefonu</label>
-          </div>
-          <div>
-            <input type="radio" id="email" name="contactChoice" value="email" required>
-            <label for="email">Adres e-mail</label>
-          </div>
-          
-          <div id="phoneField" style="display:none;">
-            <label for="phoneNumber">Numer telefonu:</label>
-            <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Wpisz numer telefonu" pattern="[0-9]{9}">
-          </div>
-          
-          <div id="emailField" style="display:none;">
-            <label for="emailAddress">Adres e-mail:</label>
-            <input type="email" id="emailAddress" name="emailAddress" placeholder="Wpisz adres e-mail">
-          </div>
-          
-          <label for="message">Treść pytania:</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
+  <section id="contact" class="section">
+    <h2>Kontakt</h2>
+    <p>Nie ma kontaktu bo masz być cicho</p>
+  </section>
 
-          <button type="submit">Wyślij</button>
-        </form>
-      </div>
-    </section>
+  <footer>
+    <p>&copy; 2025 Cisza – Wszystkie prawa zastrzeżone</p>
+  </footer>
 
-    <footer>
-      <p>&copy; 2025 Cisza – Wszystkie prawa zastrzeżone</p>
-    </footer>
-  </div>
 </body>
 </html>
