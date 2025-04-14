@@ -24,41 +24,41 @@
       display: flex; /* Flexbox dla wyśrodkowania */
       justify-content: center; /* Wyśrodkowanie poziome */
       align-items: center; /* Wyśrodkowanie pionowe */
-}
+    }
 
-  /* Kontener główny */
-  .container {
-    position: relative;
-    max-width: 900px;
-    width: 100%;
-    padding: 20px;
-    text-align: center; /* Wyśrodkowanie tekstu */
-    z-index: 10; /* Aby kontener był nad tłem */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Wyśrodkowanie zawartości w kontenerze */
-}
+    /* Kontener główny */
+    .container {
+      position: relative;
+      max-width: 900px;
+      width: 100%;
+      padding: 20px;
+      text-align: center; /* Wyśrodkowanie tekstu */
+      z-index: 10; /* Aby kontener był nad tłem */
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Wyśrodkowanie zawartości w kontenerze */
+    }
 
     /* Nagłówek */
     header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: black;
-  z-index: 1000;
-  padding: 10px 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: flex-end; /* tylko prawa strona */
-  align-items: center;
-  border-radius: 0 0 10px 10px;
-  max-width: fit-content; /* tylko tyle, ile trzeba */
-}
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: black;
+      z-index: 1000;
+      padding: 10px 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: flex-end; /* tylko prawa strona */
+      align-items: center;
+      border-radius: 0 0 10px 10px;
+      max-width: fit-content; /* tylko tyle, ile trzeba */
+    }
 
-nav {
-  display: flex;
-  gap: 20px;
-}
+    nav {
+      display: flex;
+      gap: 20px;
+    }
 
     nav a {
       margin: 0 15px;
