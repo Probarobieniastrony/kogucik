@@ -86,8 +86,11 @@ footer {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 600px;
   width: 100%;
-  max-width: 600px; /* to ogranicza szerokość */
-  margin: 0 auto;    /* to centruje */
+  margin: 0 auto;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
